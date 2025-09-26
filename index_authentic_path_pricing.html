@@ -1,0 +1,445 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>NextStep College Counseling | From Application to Acceptance</title>
+  <meta name="description" content="NextStep College Counseling helps students navigate college planning—from building a balanced list and crafting standout essays to financial aid and final decisions." />
+  <meta name="theme-color" content="#1E3A5F" />
+  <meta property="og:title" content="NextStep College Counseling" />
+  <meta property="og:description" content="From Application to Acceptance—personalized college counseling for students and families." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="/og-image.png" />
+  <meta property="og:url" content="https://nextstep.example" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --navy:#1E3A5F; /* primary */
+      --green:#3CB371; /* growth */
+      --gold:#F4B400;  /* accent */
+      --ink:#0f172a;   /* dark text */
+      --muted:#64748b; /* secondary text */
+      --bg:#ffffff;    /* page bg */
+      --soft:#f5f7fb;  /* soft section */
+      --ring:rgba(30,58,95,.25);
+      --radius:18px;
+      --shadow:0 10px 30px rgba(2,6,23,.08);
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;font-family:Lato,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,'Helvetica Neue',Arial,'Noto Sans',sans-serif;color:var(--ink);background:var(--bg);}
+    a{color:var(--navy);text-decoration:none}
+    .container{max-width:1100px;margin-inline:auto;padding:24px}
+
+    /* Header */
+    header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.9);backdrop-filter:saturate(140%) blur(8px);border-bottom:1px solid #e5e7eb}
+    .nav{display:flex;align-items:center;justify-content:space-between;gap:12px}
+    .brand{display:flex;align-items:center;gap:12px}
+    .brand svg{width:44px;height:44px}
+    .brand-title{font-family:'Libre Baskerville',serif;font-weight:700;letter-spacing:.2px;font-size:1.15rem;color:var(--navy)}
+    .tagline{font-size:.85rem;color:var(--muted)}
+    nav ul{display:flex;gap:22px;list-style:none;margin:0;padding:0}
+    nav a{font-weight:700}
+    .btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 18px;border-radius:999px;font-weight:800;border:2px solid transparent;transition:.18s box-shadow,.18s transform,.18s background,.18s color}
+    .btn-primary{background:var(--green);color:white}
+    .btn-primary:hover{transform:translateY(-1px);box-shadow:0 10px 20px rgba(60,179,113,.25)}
+    .btn-outline{border-color:var(--navy);color:var(--navy);background:white}
+    .btn-outline:hover{background:var(--navy);color:white}
+
+    /* Hero */
+    .hero{background:linear-gradient(120deg, rgba(30,58,95,.08), rgba(60,179,113,.08));}
+    .hero-wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:32px;align-items:center}
+    .kicker{color:var(--green);font-weight:900;letter-spacing:.12em;text-transform:uppercase;font-size:.8rem}
+    h1{font-family:'Libre Baskerville',serif;font-size:clamp(2rem,4vw,3rem);line-height:1.1;margin:.35em 0;color:var(--navy)}
+    .lead{font-size:1.05rem;color:#334155;max-width:64ch}
+    .card{background:white;border-radius:var(--radius);box-shadow:var(--shadow);border:1px solid #e5e7eb}
+    .hero-card{padding:20px}
+    .hero-list{display:grid;grid-template-columns:1fr 1fr;gap:10px;font-size:.95rem;margin:14px 0 0}
+    .hero-illus{padding:20px}
+    .illus{aspect-ratio:4/3;border-radius:var(--radius);background:radial-gradient(1200px 400px at -20% 10%, rgba(30,58,95,.12), transparent 60%),radial-gradient(900px 320px at 120% 110%, rgba(60,179,113,.22), transparent 60%), linear-gradient(180deg,#fff,#f6faf8)}
+
+    /* Sections */
+    section{padding:64px 0}
+    h2{font-family:'Libre Baskerville',serif;color:var(--navy);font-size:clamp(1.6rem,3vw,2rem);margin:0 0 10px}
+    .sub{color:var(--muted);margin:0 0 26px}
+
+    .features{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+    .feature{padding:20px}
+    .feature h3{margin:8px 0 8px;font-size:1.1rem}
+    .icon{width:36px;height:36px;border-radius:12px;background:var(--soft);display:grid;place-items:center;border:1px solid #e5e7eb}
+
+    .process{background:var(--soft);}
+    .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+    .step{padding:18px;position:relative}
+    .step::after{content:"";position:absolute;inset:auto  -10px 50% auto;width:20px;height:2px;background:linear-gradient(90deg,var(--navy),var(--green));transform:translateY(50%)}
+    .step:last-child::after{display:none}
+    .step .num{width:28px;height:28px;border-radius:99px;background:var(--navy);color:#fff;display:grid;place-items:center;font-weight:900;margin-bottom:8px}
+
+    .testimonials .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    blockquote{padding:18px;border-left:4px solid var(--green);background:#fff;border-radius:12px}
+    blockquote footer{color:var(--muted);font-size:.9rem;margin-top:10px}
+
+    .cta{background:linear-gradient(135deg,var(--navy),#244a79);color:white;border-radius:var(--radius)}
+    .cta .container{display:grid;grid-template-columns:1.1fr .9fr;gap:22px;align-items:center}
+    .cta h2{color:white;margin:0 0 6px}
+
+    /* Form */
+    form{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+    label{font-size:.9rem;color:var(--muted)}
+    input, select, textarea{width:100%;padding:12px 14px;border:1px solid #e5e7eb;border-radius:12px;box-shadow:inset 0 1px 0 #fff;outline:0}
+    input:focus, select:focus, textarea:focus{border-color:var(--navy);box-shadow:0 0 0 4px var(--ring)}
+    textarea{min-height:120px;grid-column:1/-1}
+    .form-actions{display:flex;gap:12px;align-items:center}
+
+    /* Footer */
+    footer{border-top:1px solid #e5e7eb;background:#fff}
+    .foot{display:grid;grid-template-columns:2fr 1fr 1fr;gap:22px}
+    .small{font-size:.9rem;color:var(--muted)}
+
+    /* Responsive */
+    @media (max-width: 900px){
+      .hero-wrap,.cta .container{grid-template-columns:1fr}
+      .features{grid-template-columns:1fr 1fr}
+      .steps{grid-template-columns:1fr 1fr}
+      .testimonials .grid{grid-template-columns:1fr}
+      .foot{grid-template-columns:1fr 1fr}
+      form{grid-template-columns:1fr}
+      .step::after{display:none}
+    }
+  </style>
+
+  <!-- Simple inline SVG used as the logo mark (Open Book Pathway) -->
+  <svg aria-hidden="true" width="0" height="0" style="position:absolute">
+    <symbol id="logo-book" viewBox="0 0 96 64">
+      <defs>
+        <linearGradient id="g1" x1="0" x2="1">
+          <stop offset="0%" stop-color="#1E3A5F"/>
+          <stop offset="100%" stop-color="#3CB371"/>
+        </linearGradient>
+      </defs>
+      <path d="M6 52V14c0-4 3-7 7-7h26c6 0 11 3 15 7 4-4 9-7 15-7h14c4 0 7 3 7 7v38c-5-5-11-8-18-8H60c-7 0-13 3-18 8-5-5-11-8-18-8H24c-8 0-14 3-18 8Z" fill="url(#g1)" opacity=".2"/>
+      <path d="M8 50V18c0-4 3-6 7-6h22c6 0 12 3 15 7 3-4 9-7 15-7h14c4 0 7 2 7 6v32c-5-4-11-6-18-6H60c-7 0-13 2-18 6-5-4-11-6-18-6H24c-8 0-14 2-16 6Z" fill="#3CB371"/>
+      <path d="M52 32c3-4 9-8 15-8h12" fill="none" stroke="#1E3A5F" stroke-width="3" stroke-linecap="round"/>
+      <path d="M44 32c-3-4-9-8-15-8H18" fill="none" stroke="#1E3A5F" stroke-width="3" stroke-linecap="round"/>
+      <circle cx="48" cy="10" r="3" fill="#1E3A5F" />
+      <path d="M48 12v8" stroke="#1E3A5F" stroke-width="2"/>
+    </symbol>
+  </svg>
+</head>
+<body>
+  <header>
+    <div class="container nav" role="navigation" aria-label="Primary">
+      <div class="brand">
+        <svg aria-hidden="true"><use href="#logo-book"/></svg>
+        <div>
+          <div class="brand-title">NextStep College Counseling</div>
+          <div class="tagline">From Application to Acceptance</div>
+        </div>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#process">Process</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact" class="btn btn-outline">Free Consult</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero" id="home">
+      <div class="container hero-wrap">
+        <div>
+          <div class="kicker">Personalized, ethical guidance</div>
+          <h1>Navigate College with Confidence</h1>
+          <p class="lead">We help students clarify goals, build a balanced college list, craft authentic essays, and manage deadlines—so families can move from stress to strategy.</p>
+          <div style="margin-top:18px;display:flex;gap:12px;flex-wrap:wrap">
+            <a class="btn btn-primary" href="#contact">Request a Free Consult</a>
+            <a class="btn btn-outline" href="#services">Explore Services</a>
+          </div>
+          <div class="card hero-card" aria-label="Highlights">
+            <div class="hero-list">
+              <div>✔ Balanced College List</div>
+              <div>✔ Essay Coaching</div>
+              <div>✔ Application Strategy</div>
+              <div>✔ Financial Aid Guidance</div>
+            </div>
+          </div>
+        </div>
+        <div class="hero-illus">
+  <img src="assets/hero-illustration.png" 
+       alt="Student walking along a path toward graduation"
+       class="card"
+       style="width:100%; border-radius:18px;">
+</div>
+    </section>
+
+    <!-- Services -->
+    <section id="services">
+      <div class="container">
+        <h2>Services</h2>
+        <p class="sub">Flexible packages for every stage—starting as early as 9th grade and through senior-year submissions.</p>
+        <div class="features">
+          <article class="card feature" aria-labelledby="svc1">
+            <div class="icon">🎯</div>
+            <h3 id="svc1">Comprehensive Counseling</h3>
+            <p>End-to-end guidance: academic planning, activities strategy, school list, essays, applications, deadlines, interviews, and decisions.</p>
+          </article>
+          <article class="card feature" aria-labelledby="svc2">
+            <div class="icon">📝</div>
+            <h3 id="svc2">Essay Coaching</h3>
+            <p>Personal statement and supplement support—brainstorming through final polish. Authentic stories that sound like the student.</p>
+          </article>
+          <article class="card feature" aria-labelledby="svc3">
+            <div class="icon">💸</div>
+            <h3 id="svc3">FAFSA & Aid Strategy</h3>
+            <p>Guidance on FAFSA/CSS, scholarships, and value-fit so families compare offers clearly and choose with confidence.</p>
+          </article>
+          <article class="card feature" aria-labelledby="svc4">
+            <div class="icon">🧭</div>
+            <h3 id="svc4">List Building</h3>
+            <p>Balanced reach/target/likely list tuned to academic profile, interests, budget, and campus culture priorities.</p>
+          </article>
+          <article class="card feature" aria-labelledby="svc5">
+            <div class="icon">⏱️</div>
+            <h3 id="svc5">Application Timeline</h3>
+            <p>Clear plans with milestone check-ins to beat procrastination and reduce stress for the whole family.</p>
+          </article>
+          <article class="card feature" aria-labelledby="svc6">
+            <div class="icon">📞</div>
+            <h3 id="svc6">Hourly Advising</h3>
+            <p>As-needed sessions for specific questions: interviews, resumes, recommenders, or final review.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing -->
+    <section id="pricing">
+      <div class="container">
+        <h2>Pricing</h2>
+        <p class="sub">Transparent options for every family. Hourly support or bundled packages—choose what fits best.</p>
+        <div class="features" style="grid-template-columns:repeat(3,1fr)">
+          <article class="card feature" aria-labelledby="tier-starter">
+            <div class="icon">⏱️</div>
+            <h3 id="tier-starter">Starter (Hourly)</h3>
+            <p><strong>$125 – $200 / hr</strong></p>
+            <ul>
+              <li>Targeted help (resume, interview, app review)</li>
+              <li>2-hour minimum recommended</li>
+              <li>Flexible scheduling</li>
+            </ul>
+            <p><a href="#contact" class="btn btn-outline">Book Hourly</a></p>
+          </article>
+
+          <article class="card feature" aria-labelledby="tier-essentials">
+            <div class="icon">📝</div>
+            <h3 id="tier-essentials">Essentials (Essays + List)</h3>
+            <p><strong>$1,200 – $2,000</strong></p>
+            <ul>
+              <li>Personal Statement (multi‑draft coaching)</li>
+              <li>3–5 supplemental essays</li>
+              <li>Balanced college list + timeline</li>
+            </ul>
+            <p><a href="#contact" class="btn btn-primary">Start Essentials</a></p>
+          </article>
+
+          <article class="card feature" aria-labelledby="tier-comp">
+            <div class="icon">🎯</div>
+            <h3 id="tier-comp">Comprehensive (10th–12th)</h3>
+            <p><strong>$3,000 – $6,000</strong></p>
+            <ul>
+              <li>Academic plan & activities strategy</li>
+              <li>Unlimited essay coaching & app support</li>
+              <li>FAFSA/CSS guidance & offer comparison</li>
+            </ul>
+            <p><a href="#contact" class="btn btn-primary">Free Consult</a></p>
+          </article>
+        </div>
+        <p class="small" style="margin-top:14px">Payment plans available. Packages can be customized; pricing varies by scope and graduation year.</p>
+      </div>
+    </section>
+
+
+    <!-- Process -->
+    <section id="process" class="process">
+      <div class="container">
+        <h2>Our Process: From Application to Acceptance</h2>
+        <p class="sub">A proven, supportive framework that keeps students in the driver’s seat.</p>
+        <div class="steps">
+          <div class="card step">
+            <div class="num">1</div>
+            <h3>Discover</h3>
+            <p>Student profile, goals, interests, and budget. We align expectations and define success together.</p>
+          </div>
+          <div class="card step">
+            <div class="num">2</div>
+            <h3>Design</h3>
+            <p>Balanced list, test plan, and activity strategy. Customized timeline and resources.</p>
+          </div>
+          <div class="card step">
+            <div class="num">3</div>
+            <h3>Develop</h3>
+            <p>Essay coaching, application builds, and recommender strategy with regular check-ins.</p>
+          </div>
+          <div class="card step">
+            <div class="num">4</div>
+            <h3>Decide</h3>
+            <p>Compare offers, visit options, and finalize the best-fit decision with clarity and confidence.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about">
+      <div class="container">
+        <h2>About NextStep</h2>
+        <p class="sub">Expert guidance with a calm, compassionate approach.</p>
+        <div class="card" style="padding:22px;display:grid;grid-template-columns:120px 1fr;gap:18px;align-items:start">
+          <div class="icon" aria-hidden="true" style="width:100%;height:100%;display:grid;place-items:center;font-size:44px">🎓</div>
+          <div>
+            <p>NextStep College Counseling partners with students and families to make the college process clear and manageable. We believe in ethical counseling, student ownership, and practical strategies that reduce stress and elevate outcomes.</p>
+            <ul>
+              <li>Member, IECA & NACAC (optional—add when applicable)</li>
+              <li>Virtual and in-person options (Charlotte / Lake Norman)</li>
+              <li>Evening & weekend availability during peak season</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials (placeholder content) -->
+    <section class="testimonials">
+      <div class="container">
+        <h2>Kind Words from Families</h2>
+        <p class="sub">Swap these placeholders with real testimonials as they come in.</p>
+        <div class="grid">
+          <blockquote>
+            “Our student felt heard and motivated. The essay coaching was a game changer.”
+            <footer>— Parent, Class of 2026</footer>
+          </blockquote>
+          <blockquote>
+            “The school list and timeline kept us sane. We knew exactly what to do each week.”
+            <footer>— Family, Class of 2025</footer>
+          </blockquote>
+          <blockquote>
+            “From FAFSA to final decision—calm, clear, and incredibly helpful.”
+            <footer>— Parent, Class of 2024</footer>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta" aria-label="Get started">
+      <div class="container">
+        <div>
+          <h2>Ready to take the next step?</h2>
+          <p class="sub" style="color:#e2e8f0">Schedule a free 20‑minute consult to discuss goals, services, and fit.</p>
+        </div>
+        <div>
+          <a href="#contact" class="btn btn-primary" style="background:var(--gold);color:#0f172a">Book a Free Consult</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+      <div class="container">
+        <h2>Contact</h2>
+        <p class="sub">Have questions? We’re here to help.</p>
+        <div class="card" style="padding:22px">
+          <form action="https://formspree.io/f/your_form_id" method="POST">
+            <!-- Replace the action with your Formspree endpoint. Settings → Use your new form code. -->
+            <div>
+              <label for="name">Student or Parent Name</label>
+              <input id="name" name="name" autocomplete="name" required />
+            </div>
+            <div>
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" autocomplete="email" required />
+            </div>
+            <div>
+              <label for="role">I am a…</label>
+              <select id="role" name="role">
+                <option>Parent/Guardian</option>
+                <option>Student</option>
+                <option>Counselor</option>
+              </select>
+            </div>
+            <div>
+              <label for="grad">Graduation Year</label>
+              <input id="grad" name="grad_year" inputmode="numeric" pattern="[0-9]{4}" placeholder="2027" />
+            </div>
+            <textarea name="message" placeholder="Tell us briefly what you’re looking for…"></textarea>
+            <div class="form-actions">
+              <button class="btn btn-primary" type="submit">Send Message</button>
+              <span class="small">By submitting, you agree to be contacted by NextStep College Counseling.</span>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container foot">
+      <div>
+        <div class="brand" style="margin-bottom:8px">
+          <svg aria-hidden="true"><use href="#logo-book"/></svg>
+          <div>
+            <div class="brand-title">NextStep College Counseling</div>
+            <div class="tagline">From Application to Acceptance</div>
+          </div>
+        </div>
+        <div class="small">© <span id="y"></span> NextStep College Counseling. All rights reserved.</div>
+      </div>
+      <div>
+        <div class="small"><strong>Email:</strong> hello@nextstep.example</div>
+        <div class="small"><strong>Phone:</strong> (xxx) xxx‑xxxx</div>
+        <div class="small"><strong>Charlotte / Lake Norman, NC</strong></div>
+      </div>
+      <div>
+        <div class="small"><a href="#services">Services</a></div>
+        <div class="small"><a href="#process">Process</a></div>
+        <div class="small"><a href="#contact">Contact</a></div>
+        <div class="small"><a href="#">Privacy</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+
+  <!-- Structured data (update fields as you finalize details) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "EducationalOrganization",
+    "name": "NextStep College Counseling",
+    "slogan": "From Application to Acceptance",
+    "areaServed": "United States",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Charlotte / Lake Norman",
+      "addressRegion": "NC",
+      "addressCountry": "US"
+    },
+    "url": "https://nextstep.example",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "customer support",
+      "email": "hello@nextstep.example"
+    }
+  }
+  </script>
+</body>
+</html>
