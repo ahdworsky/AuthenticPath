@@ -1,0 +1,604 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
+
+  <title>Authentic Path College & Career Advising — Confident, Ethical College Guidance</title>
+  <meta name="description" content="Authentic Path College & Career Advising helps students and families move from stress to strategy with ethical, personalized college planning, essay coaching, and financial aid guidance." />
+  <link rel="canonical" href="https://www.authenticpathcc.com/" />
+  <meta name="theme-color" content="#1E3A5F" />
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Authentic Path College & Career Advising" />
+  <meta property="og:description" content="Guiding Students Toward College and Career Success." />
+  <meta property="og:url" content="https://www.authenticpathcc.com/" />
+  <meta property="og:image" content="/og-image.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      /* Brand (unchanged) */
+      --navy:#1E3A5F;    /* primary */
+      --green:#3CB371;   /* growth */
+      --gold:#F4B400;    /* accent */
+      --ink:#0f172a;     /* body text */
+      --muted:#64748b;   /* secondary text */
+      --bg:#ffffff;      /* page bg */
+      --soft:#f5f7fb;    /* soft section */
+      --ring:rgba(30,58,95,.25);
+      --card: #ffffff;
+      --radius: 18px;
+      --shadow: 0 12px 36px rgba(2,6,23,.08);
+      --max: 1200px;
+    }
+
+    /* Reset / Base */
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;font-family:Lato,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,'Helvetica Neue',Arial,'Noto Sans',sans-serif;color:var(--ink);background:var(--bg)}
+    img{max-width:100%;display:block}
+    a{color:var(--navy);text-decoration:none}
+    a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+    .container{max-width:var(--max);margin-inline:auto;padding:24px}
+    .sr-only{position:absolute !important;clip:rect(1px,1px,1px,1px);clip-path:inset(50%);height:1px;width:1px;overflow:hidden;white-space:nowrap}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:12px 18px;border-radius:999px;font-weight:800;border:2px solid transparent;transition:.18s box-shadow,.18s transform,.18s background,.18s color;cursor:pointer}
+    .btn-primary{background:var(--green);color:#fff}
+    .btn-primary:hover{transform:translateY(-1px);box-shadow:0 10px 20px rgba(60,179,113,.25)}
+    .btn-ghost{background:transparent;border-color:var(--navy);color:var(--navy)}
+    .btn-ghost:hover{background:var(--navy);color:#fff}
+    .btn-gold{background:var(--gold);color:#0f172a}
+    .kicker{color:var(--green);font-weight:900;letter-spacing:.12em;text-transform:uppercase;font-size:.8rem}
+    h1,h2{font-family:'Libre Baskerville',serif;color:var(--navy);line-height:1.1}
+    h1{font-size:clamp(2rem,4vw,3.1rem);margin:.35em 0}
+    h2{font-size:clamp(1.6rem,3vw,2.2rem);margin:0 0 10px}
+    h3{margin:0 0 8px;font-size:1.15rem}
+    p{line-height:1.6}
+    .sub{color:var(--muted);margin:0 0 26px;max-width:70ch}
+    .card{background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow);border:1px solid #e5e7eb}
+
+    /* Header */
+    .skip{position:absolute;inset:8px auto auto 8px;background:#fff;padding:8px 12px;border-radius:10px;transform:translateY(-200%);transition:.2s}
+    .skip:focus{transform:none}
+    header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.85);backdrop-filter:saturate(140%) blur(8px);border-bottom:1px solid #e5e7eb}
+    .nav{display:flex;align-items:center;justify-content:space-between;gap:12px}
+    .brand{display:flex;align-items:center;gap:12px}
+    .brand svg{width:44px;height:44px;flex:0 0 44px}
+    .brand-title{font-family:'Libre Baskerville',serif;font-weight:700;letter-spacing:.2px;font-size:1.15rem;color:var(--navy)}
+    .tagline{font-size:.85rem;color:var(--muted)}
+    nav ul{display:flex;gap:22px;list-style:none;margin:0;padding:0}
+    nav a{font-weight:800}
+    .nav-cta{display:flex;align-items:center;gap:10px}
+
+    /* Hero */
+    .hero{background:radial-gradient(1400px 400px at -20% 10%, rgba(30,58,95,.08), transparent 60%),radial-gradient(1000px 320px at 120% 110%, rgba(60,179,113,.18), transparent 60%), linear-gradient(180deg,#fff,#f6faf8)}
+    .hero-wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:32px;align-items:center}
+    .lead{font-size:1.05rem;color:#334155;max-width:64ch}
+    .hero-list{display:grid;grid-template-columns:1fr 1fr;gap:10px;font-size:.95rem;margin:14px 0 0}
+    .illus{aspect-ratio:4/3;border-radius:var(--radius);background:radial-gradient(1200px 400px at -20% 10%, rgba(30,58,95,.12), transparent 60%),radial-gradient(900px 320px at 120% 110%, rgba(60,179,113,.22), transparent 60%), linear-gradient(180deg,#fff,#f6faf8)}
+
+    /* Social proof strip */
+    .trust{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;align-items:center;opacity:.9}
+    .trust .mini{display:flex;align-items:center;gap:10px;padding:12px;border:1px dashed #e5e7eb;border-radius:12px;background:#fff}
+
+    /* Programs */
+    .features{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+    .feature{padding:20px}
+    .icon{width:40px;height:40px;border-radius:12px;background:var(--soft);display:grid;place-items:center;border:1px solid #e5e7eb;font-size:22px}
+    .feature ul{margin:10px 0 0;padding-left:18px}
+
+    /* Process */
+    .process{background:var(--soft)}
+    .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+    .step{padding:18px;position:relative}
+    .step::after{content:"";position:absolute;inset:auto -10px 50% auto;width:20px;height:2px;background:linear-gradient(90deg,var(--navy),var(--green));transform:translateY(50%)}
+    .step:last-child::after{display:none}
+    .step .num{width:28px;height:28px;border-radius:99px;background:var(--navy);color:#fff;display:grid;place-items:center;font-weight:900;margin-bottom:8px}
+
+    /* Results counters */
+    .metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+    .metric{padding:18px;text-align:center}
+    .metric .value{font-size:2rem;font-weight:900;color:var(--navy)}
+    .metric .label{color:var(--muted)}
+
+    /* Testimonials */
+    .testimonials .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    blockquote{padding:18px;border-left:4px solid var(--green);background:#fff;border-radius:12px}
+    blockquote footer{color:var(--muted);font-size:.9rem;margin-top:10px}
+
+    /* CTA band */
+    .cta{background:linear-gradient(135deg,var(--navy),#244a79);color:white;border-radius:var(--radius)}
+    .cta .container{display:grid;grid-template-columns:1.1fr .9fr;gap:22px;align-items:center}
+    .cta h2{color:white;margin:0 0 6px}
+
+    /* Program Finder */
+    .finder{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+    .finder .panel{padding:18px}
+
+    /* Blog */
+    .posts{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .post{padding:18px;display:grid;gap:8px}
+    .post .badge{display:inline-block;background:var(--soft);border:1px solid #e5e7eb;padding:4px 10px;border-radius:999px;font-size:.8rem;color:var(--muted)}
+
+    /* Form */
+    form{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+    label{font-size:.9rem;color:var(--muted)}
+    input, select, textarea{width:100%;padding:12px 14px;border:1px solid #e5e7eb;border-radius:12px;box-shadow:inset 0 1px 0 #fff;outline:0}
+    input:focus, select:focus, textarea:focus{border-color:var(--navy);box-shadow:0 0 0 4px var(--ring)}
+    textarea{min-height:120px;grid-column:1/-1}
+    .form-actions{display:flex;gap:12px;align-items:center}
+    .small{font-size:.9rem;color:var(--muted)}
+
+    /* Footer */
+    footer{border-top:1px solid #e5e7eb;background:#fff}
+    .foot{display:grid;grid-template-columns:2fr 1fr 1fr;gap:22px}
+
+    /* Responsive */
+    @media (max-width: 1000px){
+      .features{grid-template-columns:1fr 1fr}
+      .steps{grid-template-columns:1fr 1fr}
+      .metrics{grid-template-columns:1fr 1fr}
+      .posts{grid-template-columns:1fr 1fr}
+      .trust{grid-template-columns:1fr 1fr}
+      .finder{grid-template-columns:1fr}
+    }
+    @media (max-width: 800px){
+      .hero-wrap,.cta .container{grid-template-columns:1fr}
+      .testimonials .grid{grid-template-columns:1fr}
+      .foot{grid-template-columns:1fr 1fr}
+      form{grid-template-columns:1fr}
+      .step::after{display:none}
+      .hero-list{grid-template-columns:1fr}
+    }
+    @media (prefers-reduced-motion: reduce){
+      *{scroll-behavior:auto}
+    }
+  </style>
+
+  <!-- Inline SVG: logo symbol preserved (unchanged) -->
+  <svg aria-hidden="true" width="0" height="0" style="position:absolute">
+    <symbol id="logo-book" viewBox="0 0 96 64">
+      <defs>
+        <linearGradient id="g1" x1="0" x2="1">
+          <stop offset="0%" stop-color="#1E3A5F"/>
+          <stop offset="100%" stop-color="#3CB371"/>
+        </linearGradient>
+      </defs>
+      <path d="M6 52V14c0-4 3-7 7-7h26c6 0 11 3 15 7 4-4 9-7 15-7h14c4 0 7 3 7 7v38c-5-5-11-8-18-8H60c-7 0-13 3-18 8-5-5-11-8-18-8H24c-8 0-14 3-18 8Z" fill="url(#g1)" opacity=".2"/>
+      <path d="M8 50V18c0-4 3-6 7-6h22c6 0 12 3 15 7 3-4 9-7 15-7h14c4 0 7 2 7 6v32c-5-4-11-6-18-6H60c-7 0-13 2-18 6-5-4-11-6-18-6H24c-8 0-14 2-16 6Z" fill="#3CB371"/>
+      <path d="M52 32c3-4 9-8 15-8h12" fill="none" stroke="#1E3A5F" stroke-width="3" stroke-linecap="round"/>
+      <path d="M44 32c-3-4-9-8-15-8H18" fill="none" stroke="#1E3A5F" stroke-width="3" stroke-linecap="round"/>
+      <circle cx="48" cy="10" r="3" fill="#1E3A5F" />
+      <path d="M48 12v8" stroke="#1E3A5F" stroke-width="2"/>
+    </symbol>
+  </svg>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to main content</a>
+
+  <!-- Header / Nav -->
+  <header>
+    <div class="container nav" role="navigation" aria-label="Primary">
+      <div class="brand" aria-label="Authentic Path College & Career Advising">
+        <svg aria-hidden="true"><use href="#logo-book"/></svg>
+        <div>
+          <div class="brand-title">Authentic Path College & Career Advising</div>
+          <div class="tagline">Guiding Students Toward College and Career Success</div>
+        </div>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#programs">Programs</a></li>
+          <li><a href="#process">Process</a></li>
+          <li><a href="#results">Results</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#blog">Blog</a></li>
+          <li class="nav-cta"><a class="btn btn-ghost" href="#contact">Free Consult</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- HERO -->
+    <section class="hero" id="home">
+      <div class="container hero-wrap">
+        <div>
+          <div class="kicker">Personalized, ethical guidance</div>
+          <h1>Navigate College with Confidence</h1>
+          <p class="lead">From first campus list to final decision, we turn the college process into a clear, student‑owned plan with authentic essays, smart timelines, and transparent aid strategy.</p>
+          <div style="margin-top:18px;display:flex;gap:12px;flex-wrap:wrap">
+            <a class="btn btn-primary" href="#contact" aria-label="Request a free consult">Request a Free Consult</a>
+            <a class="btn btn-ghost" href="#programs">Explore Programs</a>
+          </div>
+
+          <div class="card" style="padding:18px;margin-top:18px" aria-label="Highlights">
+            <div class="hero-list">
+              <div>✔ Balanced College List</div>
+              <div>✔ Essay Coaching</div>
+              <div>✔ Application Strategy</div>
+              <div>✔ Financial Aid Guidance</div>
+            </div>
+          </div>
+
+          <div class="trust" style="margin-top:18px">
+            <div class="mini">⭐ 5/5 parent satisfaction</div>
+            <div class="mini">⏱ On‑time milestones</div>
+            <div class="mini">🔒 Ethical & student‑first</div>
+            <div class="mini">🎓 Charlotte / Lake Norman & virtual</div>
+          </div>
+        </div>
+        <div class="illus card" aria-hidden="true" style="padding:0;overflow:hidden">
+          <!-- Decorative SVG path animation -->
+          <svg viewBox="0 0 800 600" role="img" aria-label="Student on a path to graduation" style="width:100%;height:auto;display:block">
+            <defs>
+              <linearGradient id="grad" x1="0" x2="1">
+                <stop offset="0%" stop-color="#1E3A5F"/>
+                <stop offset="100%" stop-color="#3CB371"/>
+              </linearGradient>
+              <filter id="soft" x="-20%" y="-20%" width="140%" height="140%">
+                <feGaussianBlur stdDeviation="6"/>
+              </filter>
+            </defs>
+            <rect width="800" height="600" fill="#ffffff"/>
+            <g opacity=".12" filter="url(#soft)">
+              <circle cx="100" cy="80" r="120" fill="#1E3A5F"/>
+              <circle cx="740" cy="560" r="140" fill="#3CB371"/>
+            </g>
+            <path d="M40 520 C 180 420, 300 460, 420 380 S 660 220, 760 240" fill="none" stroke="url(#grad)" stroke-width="10" stroke-linecap="round"/>
+            <g>
+              <circle id="dot" cx="40" cy="520" r="8" fill="#F4B400">
+                <animate attributeName="cx" values="40;200;360;520;680;760" dur="6s" repeatCount="indefinite"/>
+                <animate attributeName="cy" values="520;430;420;310;210;240" dur="6s" repeatCount="indefinite"/>
+              </circle>
+            </g>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROGRAMS -->
+    <section id="programs">
+      <div class="container">
+        <h2>Programs</h2>
+        <p class="sub">Flexible options for every stage—from early exploration to submit‑week polish.</p>
+        <div class="features">
+          <article class="card feature" aria-labelledby="p1">
+            <div class="icon">🎯</div>
+            <h3 id="p1">Comprehensive Counseling</h3>
+            <p>End‑to‑end support: academic plan, activities strategy, balanced list, test approach, essays, apps, timelines, interviews, decisions.</p>
+            <ul>
+              <li>Personalized roadmap + milestones</li>
+              <li>Regular 1:1 check‑ins</li>
+              <li>Parent progress summaries</li>
+            </ul>
+          </article>
+          <article class="card feature" aria-labelledby="p2">
+            <div class="icon">📝</div>
+            <h3 id="p2">Essay Intensive</h3>
+            <p>From blank page to confident voice—brainstorming through final polish for personal statement and key supplements.</p>
+            <ul>
+              <li>Story discovery & structure</li>
+              <li>Voice‑safe, ethical editing</li>
+              <li>Prompt‑by‑prompt planning</li>
+            </ul>
+          </article>
+          <article class="card feature" aria-labelledby="p3">
+            <div class="icon">💸</div>
+            <h3 id="p3">FAFSA & Aid Strategy</h3>
+            <p>Clear guidance on FAFSA/CSS, scholarship search, and comparing offers so families choose with confidence.</p>
+            <ul>
+              <li>Value‑fit shortlist</li>
+              <li>Offer comparison model</li>
+              <li>Scholarship action plan</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROCESS -->
+    <section id="process" class="process">
+      <div class="container">
+        <h2>Our Process</h2>
+        <p class="sub">A supportive framework that keeps students in the driver’s seat.</p>
+        <div class="steps">
+          <div class="card step"><div class="num">1</div><h3>Discover</h3><p>Student profile, goals, interests, budget; align expectations and define success together.</p></div>
+          <div class="card step"><div class="num">2</div><h3>Design</h3><p>Balanced list, testing plan, activity strategy; customized timeline and resources.</p></div>
+          <div class="card step"><div class="num">3</div><h3>Develop</h3><p>Essay coaching, application builds, recommender strategy, regular check‑ins.</p></div>
+          <div class="card step"><div class="num">4</div><h3>Decide</h3><p>Compare offers, visit options, finalize the best‑fit decision with clarity.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- RESULTS / SOCIAL PROOF -->
+    <section id="results">
+      <div class="container">
+        <h2>Results That Matter</h2>
+        <p class="sub">We measure success by reduced stress, stronger applications, and confident decisions.</p>
+        <div class="metrics">
+          <div class="card metric"><div class="value" data-count="97">0%</div><div class="label">Parents report reduced stress</div></div>
+          <div class="card metric"><div class="value" data-count="100">0%</div><div class="label">On‑time milestone completion</div></div>
+          <div class="card metric"><div class="value" data-count="92">0%</div><div class="label">Students feel more confident</div></div>
+          <div class="card metric"><div class="value" data-count="20">0 min</div><div class="label">Free consult to get started</div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about">
+      <div class="container">
+        <h2>About Authentic Path</h2>
+        <p class="sub">Expert guidance with a calm, compassionate approach—serving Charlotte / Lake Norman and families nationwide.</p>
+        <div class="card" style="padding:22px;display:grid;grid-template-columns:120px 1fr;gap:18px;align-items:start">
+          <div class="icon" aria-hidden="true" style="width:100%;height:100%;display:grid;place-items:center;font-size:44px">🎓</div>
+          <div>
+            <p>We partner with students and families to make the college process clear and manageable. We believe in ethical counseling, student ownership, and practical strategies that reduce stress and elevate outcomes.</p>
+            <ul>
+              <li>Virtual and in‑person options</li>
+              <li>Evening & weekend availability during peak season</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROGRAM FINDER (interactive) -->
+    <section>
+      <div class="container">
+        <h2>Find Your Best‑Fit Program</h2>
+        <p class="sub">Choose your student’s grade to see a recommended starting point.</p>
+        <div class="card finder">
+          <div class="panel">
+            <label for="grade">Student grade</label>
+            <select id="grade" name="grade" aria-label="Select grade">
+              <option value="9">9th</option>
+              <option value="10">10th</option>
+              <option value="11" selected>11th</option>
+              <option value="12">12th</option>
+            </select>
+          </div>
+          <div class="panel" id="rec">
+            <h3 class="rec-title">Recommendation</h3>
+            <p class="rec-body">Junior year: prioritize balanced list + testing plan; start personal statement over summer.</p>
+            <a class="btn btn-gold" href="#contact">Talk to an advisor</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="testimonials">
+      <div class="container">
+        <h2>Kind Words from Families</h2>
+        <p class="sub">Swap these placeholders with real testimonials as they come in.</p>
+        <div class="grid">
+          <blockquote>“Our student felt heard and motivated. The essay coaching was a game changer.”<footer>— Parent, Class of 2026</footer></blockquote>
+          <blockquote>“The school list and timeline kept us sane. We knew exactly what to do each week.”<footer>— Family, Class of 2025</footer></blockquote>
+          <blockquote>“From FAFSA to final decision—calm, clear, and incredibly helpful.”<footer>— Parent, Class of 2024</footer></blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA BAND -->
+    <section class="cta" aria-label="Get started">
+      <div class="container">
+        <div>
+          <h2>Ready to take the next step?</h2>
+          <p class="sub" style="color:#e2e8f0">Schedule a free 20‑minute consult to discuss goals, services, and fit.</p>
+        </div>
+        <div>
+          <a href="#contact" class="btn btn-gold">Book a Free Consult</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- BLOG PREVIEW -->
+    <section id="blog">
+      <div class="container">
+        <h2>From the Blog</h2>
+        <p class="sub">Practical tips for essays, activities, aid, and more.</p>
+        <div class="posts">
+          <article class="card post">
+            <span class="badge">Essays</span>
+            <h3>How to Find Your Real Essay Topic in 20 Minutes</h3>
+            <p>Skip the clichés. Use memory maps and micro‑moments to surface stories only you can tell.</p>
+            <a class="btn btn-ghost" href="#">Read</a>
+          </article>
+          <article class="card post">
+            <span class="badge">Planning</span>
+            <h3>Building a Balanced List Without the Guesswork</h3>
+            <p>Translate priorities into a value‑fit shortlist you’ll actually be excited about.</p>
+            <a class="btn btn-ghost" href="#">Read</a>
+          </article>
+          <article class="card post">
+            <span class="badge">Financial Aid</span>
+            <h3>FAFSA Fundamentals: What Families Get Wrong</h3>
+            <p>A quick, plain‑English primer to avoid costly assumptions and delays.</p>
+            <a class="btn btn-ghost" href="#">Read</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <div class="container">
+        <h2>Contact</h2>
+        <p class="sub">Have questions? We’re here to help.</p>
+        <div class="card" style="padding:22px">
+          <form action="https://formspree.io/f/mqaypayl" method="POST">
+            <div>
+              <label for="name">Student or Parent Name</label>
+              <input id="name" name="name" autocomplete="name" required />
+            </div>
+            <div>
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" autocomplete="email" required />
+            </div>
+            <div>
+              <label for="role">I am a…</label>
+              <select id="role" name="role">
+                <option>Parent/Guardian</option>
+                <option>Student</option>
+                <option>Counselor</option>
+              </select>
+            </div>
+            <div>
+              <label for="grad">Graduation Year</label>
+              <input id="grad" name="grad_year" inputmode="numeric" pattern="[0-9]{4}" placeholder="2027" />
+            </div>
+            <textarea name="message" placeholder="Tell us briefly what you’re looking for…"></textarea>
+
+            <!-- Hidden fields -->
+            <input type="hidden" name="_subject" value="New Authentic Path Inquiry" />
+            <input type="hidden" name="_redirect" value="https://www.authenticpathcc.com/thanks.html" />
+            <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
+
+            <div class="form-actions">
+              <button class="btn btn-primary" type="submit">Send Message</button>
+              <span class="small">By submitting, you agree to be contacted by Authentic Path College & Career Advising.</span>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container foot">
+      <div>
+        <div class="brand" style="margin-bottom:8px">
+          <svg aria-hidden="true"><use href="#logo-book"/></svg>
+          <div>
+            <div class="brand-title">Authentic Path College & Career Advising</div>
+            <div class="tagline">Guiding Students Toward College and Career Success</div>
+          </div>
+        </div>
+        <div class="small">© <span id="y"></span> Authentic Path College & Career Advising. All rights reserved.</div>
+      </div>
+      <div>
+        <div class="small"><strong>Email:</strong> <a href="mailto:advisor@authenticpathcc.com">advisor@authenticpathcc.com</a></div>
+        <div class="small"><strong>Phone:</strong> <a href="tel:+17046596873">(704) 659‑6873</a></div>
+        <div class="small"><strong>Charlotte / Lake Norman, NC</strong></div>
+      </div>
+      <div>
+        <div class="small"><a href="#programs">Programs</a></div>
+        <div class="small"><a href="#process">Process</a></div>
+        <div class="small"><a href="#contact">Contact</a></div>
+        <div class="small"><a href="#">Privacy</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    // Year
+    document.getElementById('y').textContent = new Date().getFullYear();
+
+    // Count-up metrics when visible
+    const counters = document.querySelectorAll('.metric .value');
+    const fmt = (n, unit='') => unit==='min' ? `${n} min` : `${n}%`;
+    const obs = new IntersectionObserver((entries, observer)=>{
+      entries.forEach(entry=>{
+        if(entry.isIntersecting){
+          const el = entry.target; const end = +el.dataset.count; const isMin = el.textContent.includes('min');
+          let cur = 0; const step = Math.ceil(end/50);
+          const tick = ()=>{ cur += step; if(cur>=end){ cur=end; clearInterval(timer); }
+            el.textContent = fmt(cur, isMin? 'min': '%'); };
+          const timer = setInterval(tick, 24);
+          observer.unobserve(el);
+        }
+      });
+    },{threshold:.3});
+    counters.forEach(c=>obs.observe(c));
+
+    // Program Finder copy
+    const grade = document.getElementById('grade');
+    const recTitle = document.querySelector('#rec .rec-title');
+    const recBody = document.querySelector('#rec .rec-body');
+    const map = {
+      '9': ['Start Strong (9th)', 'Build habits and explore interests. Begin light activities and keep a brag sheet.'],
+      '10': ['Momentum (10th)', 'Dial in courses, deepen activities, plan testing, start school list discovery.'],
+      '11': ['Game Plan (11th)', 'Prioritize balanced list + testing plan; start personal statement over summer.'],
+      '12': ['Senior Sprint (12th)', 'Finalize list, manage supplements, keep timelines tight, compare offers clearly.']
+    };
+    const updateRec = () => { const [t,b] = map[grade.value]; recTitle.textContent = t; recBody.textContent = b; };
+    grade.addEventListener('change', updateRec); updateRec();
+
+    // Smooth anchor offset for sticky header
+    const links = document.querySelectorAll('a[href^="#"]');
+    const headerHeight = document.querySelector('header').offsetHeight;
+    links.forEach(link=>{
+      link.addEventListener('click', e=>{
+        const id = link.getAttribute('href');
+        if(id.length>1){
+          const el = document.querySelector(id);
+          if(el){ e.preventDefault(); window.scrollTo({top: el.offsetTop - headerHeight - 8, behavior: 'smooth'}); }
+        }
+      });
+    });
+  </script>
+
+  <!-- Structured data (FAQ + Org) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Authentic Path College & Career Advising",
+    "slogan": "Guiding Students Toward College and Career Success",
+    "url": "https://www.authenticpathcc.com/",
+    "areaServed": "United States",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Charlotte / Lake Norman",
+      "addressRegion": "NC",
+      "addressCountry": "US"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "customer support",
+      "email": "advisor@authenticpathcc.com",
+      "telephone": "+1-704-659-6873"
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [{
+      "@type": "Question",
+      "name": "What exactly do you do as a college counselor?",
+      "acceptedAnswer": {"@type": "Answer","text": "We guide students and families through the entire post-secondary planning process — balanced school list, essay coaching, application strategy, timelines, and financial aid basics."}
+    },{
+      "@type": "Question",
+      "name": "When should we start—8th, 9th, 10th, 11th grade?",
+      "acceptedAnswer": {"@type": "Answer","text": "We can jump in anywhere in high school. Many start in 10th–11th for list building, test strategy, and essays. Seniors are welcome for focused support."}
+    },{
+      "@type": "Question",
+      "name": "Do you offer virtual or in-person meetings?",
+      "acceptedAnswer": {"@type": "Answer","text": "Both. Virtual nationwide and in-person in the Charlotte / Lake Norman area when schedules allow."}
+    }]
+  }
+  </script>
+
+  <!-- Optional: GA4 (paste your Measurement ID) -->
+  <!--
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-XXXXXXX');
+  </script>
+  -->
+</body>
+</html>
