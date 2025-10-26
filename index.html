@@ -252,22 +252,60 @@
     </section>
 
     <!-- About -->
-    <section id="about">
-      <div class="container">
-        <h2>About Authentic Path</h2>
-        <p class="sub">Expert guidance with a calm, compassionate approach.</p>
-        <div class="card" style="padding:22px;display:grid;grid-template-columns:120px 1fr;gap:18px;align-items:start">
-          <div class="icon" aria-hidden="true" style="width:100%;height:100%;display:grid;place-items:center;font-size:44px">🎓</div>
-          <div>
-            <p>Authentic Path College & Career Advising partners with students and families to make the college process clear and manageable. We believe in ethical counseling, student ownership, and practical strategies that reduce stress and elevate outcomes.</p>
-            <ul>
-              <li>Virtual and in-person options (Charlotte / Lake Norman)</li>
-              <li>Evening & weekend availability during peak season</li>
-            </ul>
-          </div>
-        </div>
+<section id="about">
+  <div class="container">
+    <h2>About Amanda Dworsky</h2>
+    <p class="sub">Founder of Authentic Path Advising</p>
+    <div class="card about-card">
+      <img src="assets/amanda-dworsky.jpg" 
+           alt="Portrait of Amanda Dworsky, Founder of Authentic Path Advising" 
+           class="about-photo">
+      <div class="about-text">
+        <p>With more than 20 years of experience guiding students through the college admissions process, <strong>Amanda Dworsky</strong> has built her career around helping young people find their direction and confidence as they plan for life after high school.</p>
+        <p>As an active counselor for a local high school, Amanda works closely with students and families every day—helping them clarify their goals, build balanced college lists, and navigate each step of the admissions journey. Her approach is both personal and practical, combining expert guidance with genuine care for each student’s individual story.</p>
+        <p>Before launching Authentic Path Advising, Amanda gained extensive experience on the college side of the admissions process, serving as a Regional Recruiter for the University of Alabama and as an Admissions Director for several colleges in New York. This unique background gives her a rare perspective—she understands what colleges are really looking for and how students can best present themselves.</p>
+        <p>Amanda has also developed scholarship programs, coordinated dual-enrollment and Advanced Placement initiatives, and led workshops on essays, interviews, and financial aid. She believes that every student has an authentic path waiting to be discovered—and her goal is to help them find it with confidence and clarity.</p>
+        <p>She holds a Master’s in Professional School Counseling from <strong>Sage Graduate School</strong>, a Bachelor’s in Public Relations from <strong>Syracuse University</strong>, and has been a licensed professional school counselor in North Carolina since 2009. Amanda is an active member of professional organizations including the North Carolina School Counselors Association, Southern Association of College Admissions Counselors, and the Lake Norman Consortium of College Counselors.</p>
+        <p><strong>At Authentic Path Advising, Amanda’s mission is simple:</strong> to guide students with honesty, empathy, and expertise—helping them discover their authentic path toward college and career success.</p>
       </div>
-    </section>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* About section layout */
+  .about-card {
+    padding: 28px;
+    display: grid;
+    grid-template-columns: 240px 1fr;
+    gap: 28px;
+    align-items: start;
+  }
+
+  .about-photo {
+    width: 100%;
+    border-radius: 18px;
+    box-shadow: 0 8px 20px rgba(0,0,0,.08);
+  }
+
+  .about-text p {
+    margin-bottom: 1em;
+    line-height: 1.6;
+  }
+
+  /* Responsive layout: stack photo above text on smaller screens */
+  @media (max-width: 800px) {
+    .about-card {
+      grid-template-columns: 1fr;
+      text-align: left;
+    }
+    .about-photo {
+      max-width: 300px;
+      justify-self: center;
+    }
+  }
+</style>
+
 
     <!-- Testimonials (placeholder content) -->
     <section class="testimonials">
